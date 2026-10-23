@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nuevo Comienzo trabaja junto a las comunidades para promover viviendas dignas y nuevas oportunidades.">
+  <title>Nuevo Comienzo | Construimos hogares, creamos oportunidades</title>
+  <style>
+    :root{--green:#214b3b;--green2:#2f6a50;--cream:#fbf8f1;--terra:#c96e50;--ink:#24312b;--muted:#65716b;--white:#fff}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+    a{color:inherit}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;background:rgba(251,248,241,.96);backdrop-filter:blur(8px);border-bottom:1px solid #e8e3d8;z-index:10}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+    .brand{font-size:1.25rem;font-weight:800;color:var(--green);text-decoration:none;display:flex;align-items:center;gap:10px}
+    .brand-mark{width:38px;height:38px;border-radius:12px;background:var(--green);color:white;display:grid;place-items:center;font-size:1.2rem}
+    .links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+    .links a{text-decoration:none;font-size:.92rem;font-weight:700}
+    .links a:hover{color:var(--terra)}
+    .hero{padding:66px 0 58px;background:linear-gradient(110deg,#fbf8f1 0%,#f2eadb 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+    .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:800;color:var(--terra)}
+    h1{font-size:clamp(2.5rem,5vw,4.7rem);line-height:1.04;letter-spacing:-.04em;color:var(--green);margin:14px 0 20px}
+    h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.12;color:var(--green);margin:0 0 14px;letter-spacing:-.025em}
+    h3{margin:12px 0 8px;color:var(--green)}
+    p{margin:0 0 14px}
+    .lead{font-size:1.12rem;color:#4e5b53;max-width:600px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .btn{display:inline-block;text-decoration:none;border-radius:999px;padding:12px 19px;font-weight:800;border:2px solid var(--green);background:var(--green);color:white}
+    .btn:hover{background:var(--green2);border-color:var(--green2)}
+    .btn.secondary{background:transparent;color:var(--green)}
+    .hero-art{min-height:350px;border-radius:28px;background:linear-gradient(160deg,rgba(33,75,59,.08),rgba(201,110,80,.13)),#e7ddca;display:flex;align-items:center;justify-content:center;padding:28px;overflow:hidden}
+    .house{width:min(100%,390px);text-align:center}
+    .house svg{width:100%;height:auto;display:block}
+    .house-note{font-size:.86rem;color:#526057;margin-top:12px}
+    section{padding:72px 0}
+    .section-intro{max-width:700px;margin-bottom:30px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;border:1px solid #e9e4d9;border-radius:20px;padding:25px;box-shadow:0 8px 25px rgba(33,55,42,.035)}
+    .icon{width:46px;height:46px;border-radius:14px;background:#e8f0e8;display:grid;place-items:center;font-size:1.4rem}
+    .soft{background:#f1eee5}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+    .notice{border-left:4px solid var(--terra);padding:15px 18px;background:#fff7ef;border-radius:0 12px 12px 0;color:#5e5048}
+    .schedule{width:100%;border-collapse:collapse;background:white;border-radius:16px;overflow:hidden}
+    .schedule th,.schedule td{text-align:left;padding:15px;border-bottom:1px solid #eee8dd}
+    .schedule th{background:var(--green);color:white}
+    .schedule tr:last-child td{border-bottom:0}
+    .steps{counter-reset:step;display:grid;gap:14px}
+    .step{display:flex;gap:14px;align-items:flex-start;background:white;border:1px solid #e9e4d9;border-radius:16px;padding:18px}
+    .step:before{counter-increment:step;content:counter(step);background:var(--green);color:white;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-weight:800}
+    .contact{background:var(--green);color:white;border-radius:26px;padding:36px}
+    .contact h2,.contact h3{color:white}
+    .contact .btn{background:white;color:var(--green);border-color:white}
+    .contact .btn.secondary{background:transparent;color:white}
+    footer{padding:28px 0;background:#173629;color:#dfe8e0;font-size:.9rem}
+    footer .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .small{font-size:.88rem;color:var(--muted)}
+    .contact .small{color:#d5e0d7}
+    @media(max-width:800px){nav{align-items:flex-start;flex-direction:column;padding:15px 0}.links{justify-content:flex-start;gap:12px}.hero-grid,.two-col{grid-template-columns:1fr}.hero{padding-top:42px}.hero-art{min-height:260px}.cards{grid-template-columns:1fr}.cards .card{padding:22px}section{padding:54px 0}.contact{padding:26px}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#inicio"><span class="brand-mark">⌂</span> Nuevo Comienzo</a>
+    <div class="links" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a><a href="#beneficios">Beneficios</a><a href="#horarios">Horarios</a><a href="#ayudar">Cómo ayudar</a><a href="#visitanos">Visítanos</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Juntos construimos futuro</div>
+        <h1>Construimos hogares. Creamos oportunidades.</h1>
+        <p class="lead">En Nuevo Comienzo, en Guayaquil, Ecuador, trabajamos junto a la comunidad para apoyar la construcción de casas para familias que necesitan una vivienda digna.</p>
+        <div class="actions"><a class="btn" href="#ayudar">Quiero ayudar</a><a class="btn secondary" href="#visitanos">Conocer la fundación</a></div>
+      </div>
+      <div class="hero-art" aria-label="Ilustración de una casa y un corazón">
+        <div class="house">
+          <svg viewBox="0 0 420 300" role="img" aria-label="Ilustración de una casa">
+            <circle cx="315" cy="60" r="30" fill="#e6b56b"/>
+            <path d="M45 145 L210 28 L375 145" fill="#c96e50" stroke="#9d503b" stroke-width="8" stroke-linejoin="round"/>
+            <rect x="78" y="140" width="264" height="125" rx="5" fill="#fffdf8" stroke="#214b3b" stroke-width="7"/>
+            <rect x="180" y="185" width="58" height="80" rx="3" fill="#d7e2d4" stroke="#214b3b" stroke-width="6"/>
+            <circle cx="225" cy="225" r="3.5" fill="#214b3b"/>
+            <rect x="105" y="164" width="48" height="42" rx="2" fill="#d7e7e7" stroke="#214b3b" stroke-width="5"/>
+            <path d="M129 164 V206 M105 185 H153" stroke="#214b3b" stroke-width="4"/>
+            <rect x="267" y="164" width="48" height="42" rx="2" fill="#d7e7e7" stroke="#214b3b" stroke-width="5"/>
+            <path d="M291 164 V206 M267 185 H315" stroke="#214b3b" stroke-width="4"/>
+            <path d="M35 268 Q210 250 385 268" fill="none" stroke="#77966e" stroke-width="8" stroke-linecap="round"/>
+            <path d="M55 254 Q45 220 64 203 Q86 225 73 253 M66 245 Q94 213 110 230 Q96 252 66 255" fill="#77966e"/>
+            <path d="M350 255 Q336 222 354 204 Q375 226 365 254 M361 245 Q389 215 402 231 Q388 253 361 255" fill="#77966e"/>
+          </svg>
+          <div class="house-note">Un hogar digno puede ser el comienzo de muchas oportunidades.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="beneficios">
+    <div class="wrap">
+      <div class="section-intro"><div class="eyebrow">Nuestro propósito</div><h2>¿Cómo apoyamos a las familias?</h2><p>Nuestro trabajo se centra en apoyar la construcción de casas para familias que necesitan una vivienda digna. Si quieres conocer los proyectos activos o consultar cómo solicitar apoyo, contáctanos por nuestro Instagram oficial.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">⌂</div><h3>Vivienda digna</h3><p>Impulsar iniciativas de construcción y mejoramiento de viviendas para familias que necesitan un hogar más seguro.</p></article>
+        <article class="card"><div class="icon">🤝</div><h3>Trabajo en comunidad</h3><p>Sumar esfuerzos con personas voluntarias y colaboradores para apoyar los proyectos de construcción.</p></article>
+        <article class="card"><div class="icon">🧱</div><h3>Participación solidaria</h3><p>Las personas pueden consultar cómo aportar tiempo, materiales u otros recursos a los proyectos de vivienda.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="soft" id="horarios">
+    <div class="wrap two-col">
+      <div><div class="eyebrow">Información para la comunidad</div><h2>Días y horarios de ayuda</h2><p>La jornada habitual es los sábados, aproximadamente de 7:00 a. m. a 2:00 p. m. El horario y el lugar pueden variar según el proyecto, así que recomendamos confirmar cada actividad por Instagram antes de acudir.</p><div class="notice"><strong>Importante:</strong> el horario es aproximado. Escríbenos por el Instagram oficial para confirmar la próxima jornada, la ubicación y si se necesitan voluntarios o materiales.</div></div>
+      <div>
+        <table class="schedule">
+          <thead><tr><th>Actividad</th><th>Día y hora</th></tr></thead>
+          <tbody>
+            <tr><td>Jornadas de construcción</td><td>Sábados, aprox. 7:00 a. m. – 2:00 p. m.</td></tr>
+            <tr><td>Atención e información</td><td>Consultar por Instagram</td></tr>
+            <tr><td>Participación de voluntarios</td><td>Confirmar antes de asistir</td></tr>
+            <tr><td>Ubicación de cada jornada</td><td>Consultar por Instagram</td></tr>
+          </tbody>
+        </table>
+        <p class="small" style="margin-top:12px">Horario aproximado. Confirma los detalles de cada jornada en <a href="https://www.instagram.com/nuevocomienzo.ec/" target="_blank" rel="noopener noreferrer">Instagram @nuevocomienzo.ec</a>.</p>
+      </div>
+    </div>
+  </section>
+  <section id="ayudar">
+    <div class="wrap">
+      <div class="section-intro"><div class="eyebrow">Sé parte del cambio</div><h2>¿Cómo puedes ayudar?</h2><p>Hay muchas maneras de contribuir. Puedes compartir tus conocimientos, tu tiempo o recursos para apoyar el trabajo comunitario.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">🧱</div><h3>Donar materiales</h3><p>Consulta si se necesitan cemento, bloques, herramientas, pintura u otros materiales para los proyectos activos.</p></article>
+        <article class="card"><div class="icon">🤝</div><h3>Ser voluntario</h3><p>Participa en jornadas comunitarias según tus habilidades, disponibilidad y las necesidades del equipo.</p></article>
+        <article class="card"><div class="icon">📣</div><h3>Compartir la causa</h3><p>Ayuda a que más personas conozcan la fundación y sus actividades compartiendo información verificada.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="soft" id="visitanos">
+    <div class="wrap two-col">
+      <div><div class="eyebrow">Participa en tu comunidad</div><h2>Ven, conoce y aporta</h2><p>Si deseas consultar sobre los proyectos de construcción, ofrecer una donación o participar en una jornada en Guayaquil, comunícate primero con la fundación para conocer los requisitos, el lugar y la fecha.</p>
+        <div class="steps">
+          <div class="step"><div><strong>Contáctanos</strong><br>Solicita información sobre los proyectos y las necesidades actuales.</div></div>
+          <div class="step"><div><strong>Coordina tu visita</strong><br>Confirma la dirección, el horario y la persona responsable antes de acudir.</div></div>
+          <div class="step"><div><strong>Participa</strong><br>Acércate a una actividad confirmada y contribuye de la manera que puedas.</div></div>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="eyebrow" style="color:#e8b69f">Hablemos</div><h2>Construyamos un nuevo comienzo juntos.</h2><p>Para conocer los proyectos, confirmar el horario de las jornadas o preguntar cómo colaborar, escríbenos por nuestro canal oficial.</p>
+        <p><strong>Ciudad:</strong> Guayaquil, Ecuador<br><strong>Instagram:</strong> @nuevocomienzo.ec<br><strong>Horario aproximado:</strong> sábados de 7:00 a. m. a 2:00 p. m.</p>
+        <div class="actions"><a class="btn" href="https://www.instagram.com/nuevocomienzo.ec/" target="_blank" rel="noopener noreferrer">Visitar Instagram</a><a class="btn secondary" href="#horarios">Ver horarios</a></div>
+        <p class="small" style="margin-top:14px">Confirma por Instagram la dirección y la jornada antes de asistir.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span><strong>Nuevo Comienzo</strong> — Construimos hogares, creamos oportunidades.</span><span>Guayaquil, Ecuador · Horarios sujetos a confirmación.</span></div></footer>
+</body>
+</html>
