@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png">
     <title>Fundación Nuevo Comienzo</title>
-    <meta name="description" content="Fundación Nuevo Comienzo: trabajamos junto a voluntarios para construir hogares y brindar nuevas oportunidades a familias que lo necesitan.">
-    
+    <meta name="description" content="Fundación Nuevo Comienzo: construimos hogares y nuevas oportunidades junto a nuestros voluntarios.">
+
     <style>
         :root {
             --verde: #315b45;
@@ -60,9 +61,18 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             font-size: 21px;
             font-weight: bold;
             color: var(--verde);
+        }
+
+        .logo img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
         }
 
         nav {
@@ -96,15 +106,6 @@
             background: var(--verde-oscuro);
             border-color: var(--verde-oscuro);
             transform: translateY(-2px);
-        }
-
-        .boton-secundario {
-            background: transparent;
-            color: var(--verde);
-        }
-
-        .boton-secundario:hover {
-            color: white;
         }
 
         .hero {
@@ -206,7 +207,7 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.04);
         }
 
-        .tarjeta .icono {
+        .icono {
             font-size: 32px;
             margin-bottom: 15px;
         }
@@ -236,29 +237,6 @@
             max-width: 850px;
             margin: auto;
             font-size: 18px;
-        }
-
-        .jornadas {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .horario {
-            background: white;
-            padding: 35px;
-            border-radius: 12px;
-        }
-
-        .horario h3 {
-            color: var(--verde);
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-
-        .horario p {
-            margin-bottom: 12px;
         }
 
         .galeria {
@@ -293,7 +271,7 @@
 
         .voluntariado p {
             max-width: 750px;
-            margin: 0 auto 28px;
+            margin: 0 auto 22px;
             font-size: 17px;
         }
 
@@ -301,6 +279,15 @@
             background: var(--crema);
             color: var(--verde);
             border-color: var(--crema);
+        }
+
+        .aviso-correo {
+            max-width: 700px;
+            margin: 25px auto 0;
+            padding: 17px 20px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 9px;
+            font-size: 14px;
         }
 
         .pasos {
@@ -345,7 +332,7 @@
         }
 
         .contacto p {
-            margin-bottom: 12px;
+            margin-bottom: 18px;
         }
 
         footer {
@@ -360,10 +347,6 @@
             font-size: 14px;
         }
 
-        footer a {
-            text-decoration: underline;
-        }
-
         @media (max-width: 800px) {
             .navegacion {
                 flex-direction: column;
@@ -374,8 +357,7 @@
                 gap: 12px;
             }
 
-            .presentacion,
-            .jornadas {
+            .presentacion {
                 grid-template-columns: 1fr;
             }
 
@@ -410,6 +392,10 @@
             .imagen {
                 height: 280px;
             }
+
+            .logo {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -418,14 +404,17 @@
 
 <header>
     <div class="contenedor navegacion">
-        <a href="#inicio" class="logo">Fundación Nuevo Comienzo</a>
+        <a href="#inicio" class="logo">
+            <img src="logo.png" alt="Logo Fundación Nuevo Comienzo">
+            Fundación Nuevo Comienzo
+        </a>
 
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#nosotros">Quiénes somos</a>
             <a href="#trabajo">Nuestro trabajo</a>
-            <a href="#jornadas">Jornadas</a>
             <a href="#galeria">Galería</a>
+            <a href="#ayudar">Cómo ayudar</a>
             <a href="#voluntariado">Voluntariado</a>
             <a href="#contacto">Contacto</a>
         </nav>
@@ -437,13 +426,18 @@
     <section class="hero" id="inicio">
         <div class="contenedor hero-contenido">
             <h1>Un hogar puede cambiar una historia.</h1>
+
             <p>
                 En Fundación Nuevo Comienzo creemos que todos merecen
                 la oportunidad de tener un lugar seguro al cual llamar hogar.
                 Trabajamos junto a voluntarios para construir viviendas
                 y brindar nuevas oportunidades a familias que lo necesitan.
             </p>
-            <a href="#voluntariado" class="boton">Quiero ser voluntario</a>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy-auglajSaFDa4p2deUhU8rEPv7SNIgND_Z9qB43XXgHBEA/viewform?usp=dialog"
+               target="_blank" class="boton">
+                Quiero ser voluntario
+            </a>
         </div>
     </section>
 
@@ -472,7 +466,7 @@
                     en la vida de otras familias.
                 </p>
 
-                <a href="#contacto" class="boton">Conoce cómo participar</a>
+                <a href="#voluntariado" class="boton">Conoce cómo participar</a>
             </div>
 
             <div>
@@ -486,6 +480,7 @@
     <section class="mision">
         <div class="contenedor">
             <h2>Nuestro propósito</h2>
+
             <p>
                 Trabajamos para brindar apoyo a familias que necesitan un
                 hogar digno, promoviendo la solidaridad y la participación
@@ -541,51 +536,10 @@
         </div>
     </section>
 
-    <section id="jornadas">
-        <div class="contenedor jornadas">
-            <div>
-                <img class="imagen"
-                     src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
-                     alt="Personas trabajando en una construcción">
-            </div>
-
-            <div class="horario">
-                <h3>Nuestras jornadas de ayuda</h3>
-
-                <p>
-                    Cada jornada es una oportunidad para reunir personas
-                    dispuestas a colaborar y trabajar por una causa que
-                    puede cambiar la vida de una familia.
-                </p>
-
-                <p><strong>📅 Día:</strong> Sábados</p>
-                <p><strong>⏰ Horario aproximado:</strong> 7:00 a. m. a 2:00 p. m.</p>
-                <p><strong>📍 Lugar:</strong> Guayaquil y sectores donde se desarrollen los proyectos.</p>
-
-                <p>
-                    Los lugares y detalles de cada actividad pueden variar.
-                    Por eso, recomendamos comunicarse con nosotros antes
-                    de asistir para confirmar la información de la próxima
-                    jornada.
-                </p>
-
-                <a href="https://www.instagram.com/nuevocomienzo.ec/"
-                   target="_blank" class="boton">
-                    Consultar próxima jornada
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section>
+    <section id="ayudar">
         <div class="contenedor">
             <div class="titulo">
                 <h2>¿Cómo puedes ayudar?</h2>
-                <p>
-                    No importa cuánto puedas aportar. Cada colaboración
-                    representa una oportunidad para acercarnos a nuestro
-                    objetivo.
-                </p>
             </div>
 
             <div class="tarjetas">
@@ -593,19 +547,9 @@
                     <div class="icono">🧱</div>
                     <h3>Participa como voluntario</h3>
                     <p>
-                        Acompáñanos en nuestras jornadas de construcción.
-                        Puedes aportar tu energía, tiempo y disposición
-                        para ayudar.
-                    </p>
-                </div>
-
-                <div class="tarjeta">
-                    <div class="icono">🛠️</div>
-                    <h3>Colabora con materiales</h3>
-                    <p>
-                        Los materiales y recursos necesarios para construir
-                        son fundamentales. Puedes comunicarte con nosotros
-                        para conocer las necesidades de cada proyecto.
+                        Acompáñanos en nuestras actividades. Puedes aportar
+                        tu energía, tiempo y disposición para ayudar a construir
+                        hogares y nuevas oportunidades para otras familias.
                     </p>
                 </div>
 
@@ -614,8 +558,8 @@
                     <h3>Comparte nuestra causa</h3>
                     <p>
                         Ayúdanos a llegar a más personas compartiendo nuestro
-                        trabajo. Una publicación o recomendación puede
-                        motivar a alguien más a colaborar.
+                        trabajo y motivando a otros a formar parte de esta
+                        iniciativa solidaria.
                     </p>
                 </div>
             </div>
@@ -626,6 +570,7 @@
         <div class="contenedor">
             <div class="titulo">
                 <h2>Lo que construimos juntos</h2>
+
                 <p>
                     Cada fotografía representa el esfuerzo de las personas
                     que deciden colaborar y el progreso de nuestro trabajo
@@ -634,7 +579,7 @@
             </div>
 
             <div class="galeria">
-                <!-- Reemplaza estas imágenes por fotografías reales de la fundación -->
+                <!-- Reemplaza estas imágenes por fotografías reales -->
 
                 <img class="foto"
                      src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=700&q=85"
@@ -663,7 +608,7 @@
 
             <p class="nota-galeria">
                 Próximamente, aquí podrás conocer más fotografías de nuestras
-                jornadas y proyectos realizados.
+                actividades y proyectos realizados.
             </p>
         </div>
     </section>
@@ -681,14 +626,23 @@
 
             <p>
                 Regístrate mediante nuestro formulario y déjanos tus datos.
-                Nos pondremos en contacto contigo para compartir información
-                sobre las próximas actividades y los pasos para participar.
+                Después de completar tu inscripción, recibirás un correo
+                electrónico con la invitación para unirte a nuestro grupo
+                de voluntarios.
             </p>
 
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy-auglajSaFDa4p2deUhU8rEPv7SNIgND_Z9qB43XXgHBEA/viewform?usp=dialog"
                target="_blank" class="boton">
                 Registrarme como voluntario
             </a>
+
+            <div class="aviso-correo">
+                <strong>¡Importante!</strong><br>
+                Después de registrarte, revisa tu correo electrónico.
+                Si no encuentras nuestro mensaje de invitación en tu bandeja
+                principal, recuerda revisar también la carpeta de spam o
+                correo no deseado.
+            </div>
         </div>
     </section>
 
@@ -696,6 +650,7 @@
         <div class="contenedor">
             <div class="titulo">
                 <h2>¿Cómo puedes unirte?</h2>
+
                 <p>
                     Formar parte de nuestras actividades es sencillo.
                     Sigue estos pasos para comenzar a colaborar.
@@ -714,19 +669,20 @@
 
                 <div class="paso">
                     <div class="numero">2</div>
-                    <h3>Espera nuestro contacto</h3>
+                    <h3>Revisa tu correo</h3>
                     <p>
-                        Revisaremos tu registro y nos comunicaremos
-                        contigo para darte más información.
+                        Recibirás un mensaje con la invitación para
+                        unirte al grupo de voluntarios. Revisa también
+                        la carpeta de spam.
                     </p>
                 </div>
 
                 <div class="paso">
                     <div class="numero">3</div>
-                    <h3>Confirma tu participación</h3>
+                    <h3>Únete al grupo</h3>
                     <p>
-                        Recibe los detalles de la próxima jornada
-                        y confirma tu asistencia.
+                        Abre la invitación que recibiste por correo
+                        y sigue las instrucciones para unirte.
                     </p>
                 </div>
 
@@ -734,8 +690,8 @@
                     <div class="numero">4</div>
                     <h3>¡Sé parte del cambio!</h3>
                     <p>
-                        Acompáñanos y aporta tu esfuerzo para ayudar
-                        a construir nuevas oportunidades.
+                        Mantente informado y participa en las actividades
+                        de Fundación Nuevo Comienzo.
                     </p>
                 </div>
             </div>
@@ -744,35 +700,21 @@
 
     <section class="contacto" id="contacto">
         <div class="contenedor">
-            <h2>Conoce más sobre nosotros</h2>
+            <h2>¿Quieres formar parte?</h2>
 
             <p>
-                ¿Tienes preguntas, deseas colaborar o quieres conocer
-                más sobre nuestras actividades?
+                Tu tiempo y compromiso pueden marcar una diferencia
+                en la vida de una familia.
             </p>
 
             <p>
-                Estamos disponibles para conversar contigo y explicarte
-                cómo puedes formar parte de Fundación Nuevo Comienzo.
+                Inscríbete como voluntario y recibe por correo electrónico
+                la invitación para unirte a nuestra comunidad.
             </p>
 
-            <p><strong>📍 Ubicación:</strong> Guayaquil, Ecuador</p>
-
-            <p><strong>📅 Jornadas:</strong> Sábados, aproximadamente de 7:00 a. m. a 2:00 p. m.</p>
-
-            <p>
-                <strong>Instagram:</strong>
-                <a href="https://www.instagram.com/nuevocomienzo.ec/"
-                   target="_blank">
-                    @nuevocomienzo.ec
-                </a>
-            </p>
-
-            <br>
-
-            <a href="https://www.instagram.com/nuevocomienzo.ec/"
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy-auglajSaFDa4p2deUhU8rEPv7SNIgND_Z9qB43XXgHBEA/viewform?usp=dialog"
                target="_blank" class="boton">
-                Contáctanos por Instagram
+                Quiero participar
             </a>
         </div>
     </section>
@@ -785,16 +727,7 @@
 
         <p>Construyendo hogares, creando oportunidades.</p>
 
-        <p>
-            Guayaquil, Ecuador
-        </p>
-
-        <p>
-            <a href="https://www.instagram.com/nuevocomienzo.ec/"
-               target="_blank">
-                Síguenos en Instagram
-            </a>
-        </p>
+        <p>Guayaquil, Ecuador</p>
 
         <p>© 2026 Fundación Nuevo Comienzo. Todos los derechos reservados.</p>
     </div>
